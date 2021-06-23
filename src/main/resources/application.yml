@@ -15,6 +15,12 @@ spring:
           uri: lb://CHAMPION-SERVICE
           predicates:
             - Path=/champions/**
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
 
 
 eureka:
